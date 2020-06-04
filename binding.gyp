@@ -6,6 +6,7 @@
   'targets': [
     {
       'target_name': 'iconv',
+      'product_dir': '<(module_path)',
       'include_dirs': ['<!(node -e "require(\'nan\')")'],
       'sources': ['src/binding.cc'],
       'ccflags': [

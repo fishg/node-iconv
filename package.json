@@ -19,9 +19,18 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "nan": "^2.14.0",
-    "safer-buffer": "^2.1.2"
+    "safer-buffer": "^2.1.2",
+    "node-pre-gyp": "0.6.x"
   },
   "scripts": {
+    "install" : "node-pre-gyp install --fallback-to-build",
     "test": "node test/run-tests.js"
+  },
+  "binary": {
+    "module_name" : "iconv",
+    "module_path" : "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "remote_path" : "./{module_name}/v{version}/{configuration}/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host"        : "https://ym-public.oss-cn-shenzhen.aliyuncs.com/node_prebuild"
   }
 }
