@@ -42,6 +42,7 @@
           },
           'xcode_settings': {
             'WARNING_CFLAGS!': ['-W', '-Wall', '-Wextra'],
+            "MACOSX_DEPLOYMENT_TARGET":"10.9",
             'WARNING_CFLAGS': [
               '-Wno-parentheses-equality',
               '-Wno-static-in-inline',
